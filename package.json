@@ -1,0 +1,12 @@
+{
+  "name": "petshop-devops-assignment",
+  "version": "1.0.0",
+  "description": "PetShop — online store for pet equipment, cosmetics, food & toys",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install"
+  },
+  "author": "Dasun, Nimsara, Samintha",
+  "license": "MIT"
+}
