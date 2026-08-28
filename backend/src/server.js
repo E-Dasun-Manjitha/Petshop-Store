@@ -30,8 +30,10 @@ app.get('/', (req, res) => {
   });
 });
 
-// TODO: Nimsara will add routes here on feature branches
-// app.use('/api/products', productRoutes);
+// Routes
+app.use('/api/products', require('./routes/products'));
+
+// TODO: Nimsara will add more routes here on feature branches
 // app.use('/api/orders', orderRoutes);
 // app.use('/api/categories', categoryRoutes);
 
