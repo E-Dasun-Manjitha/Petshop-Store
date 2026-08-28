@@ -32,9 +32,9 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/products', require('./routes/products'));
+app.use('/api/orders', require('./routes/orders'));
 
 // TODO: Nimsara will add more routes here on feature branches
-// app.use('/api/orders', orderRoutes);
 // app.use('/api/categories', categoryRoutes);
 
 app.listen(PORT, () => {
