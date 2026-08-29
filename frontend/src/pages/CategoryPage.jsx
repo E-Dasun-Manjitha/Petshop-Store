@@ -43,11 +43,11 @@ const CategoryPage = ({ addToCart }) => {
 
           return (
             <div key={p._id} className="product-card" style={{ overflow: "hidden", padding: 0, display: "flex", flexDirection: "column" }}>
-              <div style={{ width: "100%", height: "200px", overflow: "hidden", backgroundColor: "#1e293b", position: "relative" }}>
+              <div style={{ width: "100%", height: "200px", minHeight: "200px", flexShrink: 0, overflow: "hidden", backgroundColor: "#1e293b", position: "relative" }}>
                 <img 
                   src={displayImage} 
                   alt={p.name} 
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} 
                   onError={(e) => {
                     e.target.style.display = "none";
                     e.target.nextSibling.style.display = "flex";
