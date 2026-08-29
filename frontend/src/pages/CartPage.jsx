@@ -1,47 +1,62 @@
-import { ShoppingBag } from 'lucide-react';
-import api from '../api';
+import { Trash2, ShoppingBag, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const CartPage = ({ cart, clearCart }) => {
+const CartPage = ({ cart, clearCart, onOpenCheckout }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
-  
-  const handleCheckout = async () => {
-    try {
-      await api.post('/api/orders', { items: cart, totalAmount: total });
-      alert("Order placed successfully! 🐾");
-      clearCart();
-    } catch (_err) {
-      alert("Failed to place order.");
-    }
-  };
+
+  if (cart.length === 0) {
+    return (
+      <div style={{ padding: "4rem 1rem", textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
+        <ShoppingBag size={64} color="#f59e0b" style={{ margin: "0 auto 1.5rem" }} />
+        <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>Your Cart is Empty</h2>
+        <p style={{ color: "#94a3b8", marginBottom: "2rem" }}>Looks like you haven't added any pet goodies yet.</p>
+        <Link to="/" className="btn-primary">Explore Products</Link>
+      </div>
+    );
+  }
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <ShoppingBag /> Your Cart
+    <div style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
+      <h2 style={{ fontSize: "2.2rem", marginBottom: "2rem", borderBottom: "3px solid #f59e0b", display: "inline-block" }}>
+        Shopping Cart
       </h2>
-      
-      {cart.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '3rem', background: 'var(--bg-card)', borderRadius: '16px' }}>
-          <p style={{ color: 'var(--text-muted)' }}>Your cart is empty. Time to spoil your pet!</p>
-        </div>
-      ) : (
-        <div style={{ background: 'var(--bg-card)', padding: '2rem', borderRadius: '16px' }}>
-          {cart.map((item, idx) => (
-            <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-              <span style={{ fontWeight: '600' }}>{item.name}</span>
-              <span style={{ color: 'var(--accent)' }}>Rs. {item.price}</span>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
+        {cart.map((item, idx) => (
+          <div key={idx} style={{ background: "#1e293b", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "12px", padding: "1.2rem 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+              {item.image && (
+                <img src={item.image} alt={item.name} style={{ width: "60px", height: "60px", borderRadius: "8px", objectFit: "cover" }} />
+              )}
+              <div>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0.25rem" }}>{item.name}</h4>
+                <span style={{ color: "#94a3b8", fontSize: "0.9rem" }}>Category: {item.category}</span>
+              </div>
             </div>
-          ))}
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem', fontSize: '1.5rem', fontWeight: 'bold' }}>
-            <span>Total:</span>
-            <span>Rs. {total}</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+              <span style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#f59e0b" }}>Rs. {Number(item.price).toLocaleString()}</span>
+            </div>
           </div>
-          <button onClick={handleCheckout} className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
-            Proceed to Checkout
+        ))}
+      </div>
+
+      <div style={{ background: "#1e293b", padding: "1.8rem", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.1)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div>
+          <span style={{ color: "#94a3b8", fontSize: "1rem" }}>Total Amount:</span>
+          <h3 style={{ fontSize: "2.2rem", color: "#f59e0b", fontWeight: "800" }}>Rs. {total.toLocaleString()}</h3>
+        </div>
+
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <button onClick={clearCart} className="btn-secondary" style={{ color: "#ef4444" }}>
+            <Trash2 size={18} /> Clear Cart
+          </button>
+          <button onClick={onOpenCheckout} className="btn-primary" style={{ padding: "0.9rem 2rem", fontSize: "1.1rem" }}>
+            Proceed to Payment <ArrowRight size={20} />
           </button>
         </div>
-      )}
+      </div>
     </div>
   );
 };
+
 export default CartPage;
