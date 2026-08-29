@@ -5,14 +5,14 @@
 
 ## ?? Live Deployment
 - **Frontend (Live Site):** [https://petshop-store-dusky.vercel.app](https://petshop-store-dusky.vercel.app)
-- **Backend API:** [Render URL - Add your Render backend URL here](https://render.com)
+- **Backend API:** [Render URL - https://petshop-backend-r5p8.onrender.com](https://render.com)
 
 ---
 
 ## Group Information
-- **Student 1:** [Dasun's Full Name as in LMS] - [Dasun's Student ID] - Role: DevOps/Release Manager
-- **Student 2:** [Nimsara's Full Name as in LMS] - [Nimsara's Student ID] - Role: Backend Developer
-- **Student 3:** [Samintha's Full Name as in LMS] - [Samintha's Student ID] - Role: Frontend Developer
+- **Student 1:** [E.Dasun Manjitha] - [ITBIN-2313-0062] - Role: DevOps/Release Manager
+- **Student 2:** [W.M.R.T.Nimsara] - [ITBIN-2313-0127] - Role: Backend Developer
+- **Student 3:** [A.G.S Lakshan] - [ITBIN-2313-0055] - Role: Frontend Developer
 
 ## Project Description
 PetShop is a full-stack e-commerce web application for browsing and ordering pet equipment, cosmetics, food, and toys. Built as a team project demonstrating professional Git workflows, automated CI/CD, and cloud deployment.
