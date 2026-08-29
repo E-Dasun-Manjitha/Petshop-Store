@@ -63,7 +63,7 @@ const CategoryPage = ({ addToCart }) => {
                 <h3 style={{ fontSize: "1.3rem", marginBottom: "0.5rem", fontWeight: "700" }}>{p.name}</h3>
                 <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", flex: 1, fontSize: "0.95rem", lineHeight: "1.4" }}>{p.description}</p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "auto" }}>
-                  <span style={{ fontSize: "1.3rem", fontWeight: "bold", color: "var(--accent)" }}>Rs. {p.price}</span>
+                  <span style={{ fontSize: "1.3rem", fontWeight: "bold", color: "var(--accent)" }}>Rs. {Number(p.price).toLocaleString()}</span>
                   <button className="btn-primary" onClick={() => addToCart(p)}><Plus size={18}/> Add</button>
                 </div>
               </div>

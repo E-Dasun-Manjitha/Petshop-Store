@@ -2,7 +2,7 @@ import { Trash2, ShoppingBag, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const CartPage = ({ cart, clearCart, onOpenCheckout }) => {
-  const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   if (cart.length === 0) {
     return (
@@ -34,7 +34,7 @@ const CartPage = ({ cart, clearCart, onOpenCheckout }) => {
               </div>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-              <span style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#f59e0b" }}>Rs. {item.price}</span>
+              <span style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#f59e0b" }}>Rs. {Number(item.price).toLocaleString()}</span>
             </div>
           </div>
         ))}
@@ -43,7 +43,7 @@ const CartPage = ({ cart, clearCart, onOpenCheckout }) => {
       <div style={{ background: "#1e293b", padding: "1.8rem", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.1)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <span style={{ color: "#94a3b8", fontSize: "1rem" }}>Total Amount:</span>
-          <h3 style={{ fontSize: "2.2rem", color: "#f59e0b", fontWeight: "800" }}>Rs. {total}</h3>
+          <h3 style={{ fontSize: "2.2rem", color: "#f59e0b", fontWeight: "800" }}>Rs. {total.toLocaleString()}</h3>
         </div>
 
         <div style={{ display: "flex", gap: "1rem" }}>
