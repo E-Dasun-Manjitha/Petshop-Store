@@ -10,9 +10,9 @@
 ---
 
 ## Group Information
-- **Student 1:** Dasun Manjitha - Role: DevOps/Release Manager
-- **Student 2:** Nimsara - Role: Backend Developer
-- **Student 3:** Samintha - Role: Frontend Developer
+- **Student 1:** [Dasun's Full Name as in LMS] - [Dasun's Student ID] - Role: DevOps/Release Manager
+- **Student 2:** [Nimsara's Full Name as in LMS] - [Nimsara's Student ID] - Role: Backend Developer
+- **Student 3:** [Samintha's Full Name as in LMS] - [Samintha's Student ID] - Role: Frontend Developer
 
 ## Project Description
 PetShop is a full-stack e-commerce web application for browsing and ordering pet equipment, cosmetics, food, and toys. Built as a team project demonstrating professional Git workflows, automated CI/CD, and cloud deployment.
@@ -75,5 +75,7 @@ cd backend && npm install && npm run dev
 - The frontend auto-deploys to **Vercel** via the Vercel CLI.
 - The backend auto-deploys to **Render** via a secure deploy hook webhook.
 
-## Known Limitations
-- Backend free tier (Render) may take ~30s to wake up after inactivity.
+## ??? Challenges & Resolutions (Merge Conflict Documentation)
+During the development phase, our team encountered a **Git Merge Conflict** when Samintha (Frontend) and Nimsara (Backend) both modified `App.jsx` simultaneously on different feature branches. 
+- **The Conflict:** Nimsara added API integration logic at the top of the file, while Samintha added routing logic in the same block.
+- **The Resolution:** Dasun (DevOps) pulled the `develop` branch locally, ran `git merge feature/frontend-auth`, which triggered the conflict. We opened VS Code, used the built-in Merge Editor to Accept Both Changes, manually reorganized the imports, and committed the resolved file. This taught us the importance of communicating before modifying core entry-point files.
