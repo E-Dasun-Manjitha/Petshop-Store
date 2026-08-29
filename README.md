@@ -16,11 +16,9 @@
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| **E. Dasun Manjitha** | [FILL YOUR STUDENT ID] | DevOps / Release Manager |
-| **Thanuj Nimsara** | [FILL YOUR STUDENT ID] | Backend Developer |
-| **E. Samintha Lakshan** | [FILL YOUR STUDENT ID] | Frontend Developer |
-
-> ⚠️ **Note:** Replace `[FILL YOUR STUDENT ID]` with your actual Student IDs exactly as shown in LMS before submission.
+| **E.Dasun Manjitha** | [ITBIN-2313-0062] | DevOps / Release Manager |
+| **W.M.R.T.Nimsara** | [ITBIN-2313-0127] | Backend Developer |
+| **A.G.S Lakshan** | [ITBIN-2313-0055] | Frontend Developer |
 
 ---
 
@@ -211,6 +209,6 @@ Petshop-Store/
 
 ## 📜 License
 
-This project was created for the **Systems Administration & Maintenance** module assignment at NSBM Green University.
+This project was created for the **Systems Administration & Maintenance** module assignment at HORIZON Campus.
 
-**Instructor:** Isuru Samarappulige
+**Instructor:** Mr.Isuru Samarappulige
