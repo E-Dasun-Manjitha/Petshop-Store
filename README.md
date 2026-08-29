@@ -3,7 +3,7 @@
 ![CI Pipeline](https://github.com/E-Dasun-Manjitha/Petshop-Store/actions/workflows/ci.yml/badge.svg)
 ![Deploy to Production](https://github.com/E-Dasun-Manjitha/Petshop-Store/actions/workflows/deploy.yml/badge.svg)
 
-## 🚀 Live Deployment
+## Live Deployment
 
 | Platform | URL |
 |----------|-----|
@@ -12,7 +12,7 @@
 
 ---
 
-## 👥 Group Information
+## Group Information
 
 | Name | Student ID | Role |
 |------|-----------|------|
@@ -22,11 +22,11 @@
 
 ---
 
-## 📋 Project Description
+## Project Description
 
 PetShop is a full-stack e-commerce web application for browsing and purchasing pet supplies including food, toys, equipment, and grooming products. The project demonstrates professional Git workflows, automated CI/CD pipelines with GitHub Actions, and cloud deployment to Vercel and Render.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Layer | Technology |
 |-------|-----------|
@@ -36,7 +36,7 @@ PetShop is a full-stack e-commerce web application for browsing and purchasing p
 | **Deployment** | Vercel (frontend), Render (backend) |
 | **Version Control** | Git, GitHub (branch protection, PRs, code reviews) |
 
-## ✨ Features
+## Features
 
 - **User Authentication** – Login and Registration modal with localStorage session management
 - **Product Catalog** – Browse products across 4 categories (Food, Toys, Equipment, Cosmetics)
@@ -47,7 +47,7 @@ PetShop is a full-stack e-commerce web application for browsing and purchasing p
 
 ---
 
-## 🌿 Branch Strategy
+## Branch Strategy
 
 We followed a **Git Flow** branching model:
 
@@ -72,7 +72,7 @@ main (production, protected)
 
 ---
 
-## 👤 Individual Contributions
+## Individual Contributions
 
 ### E. Dasun Manjitha – DevOps / Release Manager
 - Created and configured the GitHub repository
@@ -104,7 +104,7 @@ main (production, protected)
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) v18 or higher
@@ -139,7 +139,7 @@ PORT=5000
 
 ---
 
-## 🔄 CI/CD Pipeline
+## CI/CD Pipeline
 
 ### CI Pipeline (`ci.yml`)
 Triggered on every push and pull request to `main`, `develop`, and `feature/**` branches:
@@ -153,7 +153,7 @@ Triggered on push to `main` branch only:
 
 ---
 
-## 🔀 Merge Conflict Documentation
+## Merge Conflict Documentation
 
 During development, our team encountered a **Git merge conflict** when Samintha (Frontend) and Nimsara (Backend) both modified `App.jsx` simultaneously on different feature branches.
 
@@ -173,7 +173,7 @@ During development, our team encountered a **Git merge conflict** when Samintha 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Petshop-Store/
@@ -207,7 +207,7 @@ Petshop-Store/
 
 ---
 
-## 📜 License
+## License
 
 This project was created for the **Systems Administration & Maintenance** module assignment at HORIZON Campus.
 
